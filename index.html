@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
 	<link rel="stylesheet" href="bower_components/ng-img-crop/compile/minified/ng-img-crop.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body ng-cloak ng-controller="ngUpCropCtrl as vm">
@@ -16,8 +17,7 @@
 			<md-card>
 				<img ng-src="{{vm.fileSelected ? croppedDataUrl:'images/no-image-available.jpg'}}" class="md-card-image" alt="no-image-available">
 				<md-card-actions layout="row" layout-align="end center">
-					<md-button ng-model="vm.demo.image" ngf-select="vm.fileSelected=true;vm.onFileSelect($file, $event)" class="md-raised">Select</md-button>
-				    <md-button class="md-raised md-primary">Upload</md-button>
+					<md-button ng-model="vm.demo.image" ngf-select="vm.fileSelected=true;vm.onFileSelect($file, $event, true)" class="md-raised md-primary">Select</md-button>
 				</md-card-actions>
 			</md-card>
 		</div>
@@ -29,9 +29,9 @@
 	      	<md-dialog aria-label="Image dialog">
 	      		<md-toolbar class="height50">
 	  		      <div class="md-toolbar-tools height50">
-	  		        <h2>Crop Profile image</h2>
+	  		        <h2>Crop image</h2>
 	  		        <span flex></span>
-	  		        <md-button class="md-icon-button" ng-click="closeImageDialog()">
+	  		        <md-button class="md-icon-button" ng-click="vm.closeImageDialog()">
 	  		          <md-icon aria-label="Close dialog">close</md-icon>
 	  		        </md-button>
 	  		      </div>
@@ -40,20 +40,13 @@
 	  		    	<div >
 			        	<div class="cropArea">
 			        		<img-crop image="vm.demo.image | ngfDataUrl" result-image="croppedDataUrl" ng-init="croppedDataUrl=''"> </img-crop>
-			        	</div>	
-			        	<!-- <div class="tac"><img ng-src="{{myCroppedImage}}" /></div> -->
+			        	</div>
 			        </div>
 	        	</md-dialog-content>
-	        	<!-- <md-dialog-actions layout="row">
-	        			<span class="positiorel changeupload">
-	        				<a ng-href="" class="upoadpro">choose another image </a>
-	        				<input type="file" class="uploadpic" ngf-select="selectFile($file, false)" accept="image/*">
-	        			</span>
-			        	<md-button type="button" ng-click="uploadProfileImage(myCroppedImage,myImage.name)" class="exploremapsearchgraybtn martop10 md-raised md-primary btnComn isLoading" aria-label="upload" ng-disabled="spinner">
-			        		<span ng-hide="spinner">Upload</span>
-			        		<md-progress-circular md-mode="{{determinateValue > 0 ? 'determinate':'indeterminate'}}" value="{{determinateValue}}" class="md-hue-2" md-diameter="20px"></md-progress-circular>
-			        	</md-button>
-	        	</md-dialog-actions> -->
+	        	<md-dialog-actions layout="row" layout-align="space-between center">
+					<md-button ng-model="vm.demo.image" ngf-select="vm.fileSelected=true;vm.onFileSelect($file, $event, false)" class="md-raised">Select</md-button>
+				    <md-button ng-click="vm.uploadFile(croppedDataUrl, vm.setting.image)" class="md-raised md-primary">Upload</md-button>
+				</md-dialog-actions>
 	      	</md-dialog>
 	    </div>
 	 </div>
