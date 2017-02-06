@@ -1,0 +1,24 @@
+{
+  "name": "ngUpCrop",
+  "authors": [
+    "yasharma <yashsharma205@gmail.com>"
+  ],
+  "description": "combination of ngupload and ngImagecrop with angular material",
+  "main": "index.html",
+  "keywords": [
+    "angular",
+    "angular-material",
+    "ngUpload",
+    "ngImgCrop",
+    "javascript"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
