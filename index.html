@@ -44,8 +44,9 @@
 			        </div>
 	        	</md-dialog-content>
 	        	<md-dialog-actions layout="row" layout-align="space-between center">
+	        		<md-progress-linear md-mode="determinate" value="{{vm.progress}}"></md-progress-linear>
 					<md-button ng-model="vm.demo.image" ngf-select="vm.fileSelected=true;vm.onFileSelect($file, $event, false)" class="md-raised">Select</md-button>
-				    <md-button ng-click="vm.uploadFile(croppedDataUrl, vm.setting.image)" class="md-raised md-primary">Upload</md-button>
+				    <md-button ng-click="vm.uploadFile(croppedDataUrl, vm.demo.image)" class="md-raised md-primary">Upload</md-button>
 				</md-dialog-actions>
 	      	</md-dialog>
 	    </div>
