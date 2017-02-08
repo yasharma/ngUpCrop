@@ -18,6 +18,7 @@
 		// Close md-dialog
 		vm.closeImageDialog = function () {
 			vm.fileSelected = false;
+			vm.demo.image = '';
 			$mdDialog.hide();
 		};
 
@@ -30,9 +31,11 @@
         		},
 	        }).then(function (response) {
 	            $timeout(function () {
+	            	$mdDialog.hide();
           			onSuccessItem(response.data);
         		});
 	        }, function (response) {
+	        	$mdDialog.hide();
 	            if (response.status > 0) onErrorItem(response.errors);
 	        }, function (evt) {
 	            vm.progress = parseInt(100.0 * evt.loaded / evt.total, 10);

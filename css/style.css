@@ -8,3 +8,12 @@ img-crop canvas {
     left: 50%;
     outline: 0;
 }
+.text-content {
+    background-color: #efefef;
+    padding: 10px;
+    margin: 8px;
+}
+
+.text-content p {
+    margin: 0;
+}
