@@ -1,0 +1,22 @@
+{
+  "name": "ngupcrop",
+  "version": "1.0.0",
+  "description": "Image upload tool   This plugin is combination of [angular material](material.angularjs.org/latest/getting-started), [ng-file-upload](https://github.com/danialfarid/ng-file-upload) and [ngImgCrop](https://github.com/alexk111/ngImgCrop)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasharma/ngUpCrop.git"
+  },
+  "author": "Yash Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasharma/ngUpCrop/issues"
+  },
+  "homepage": "https://github.com/yasharma/ngUpCrop#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^2.0.1",
+    "pump": "^1.0.2"
+  }
+}
