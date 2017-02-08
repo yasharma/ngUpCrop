@@ -18,4 +18,14 @@ You can use any server either php, python or node, In linux their is python serv
 $ python -m SimpleHTTPServer 8081
 ```
 
+```javascript
+Upload.upload({
+    url: 'path-your-api-url',
+    data:  {
+		logo: Upload.dataUrltoBlob(dataUrl, file.name)
+	},
+});
+```
+Replace `url: 'path-your-api-url'` with you actual url.
+
 visit in browser [http://localhost:8081](http://localhost:8081)

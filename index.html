@@ -21,7 +21,16 @@
 			</md-card>
 		<!-- </div> -->
 		<div class="text-content">
-		<p>File will not upload to actual server right now, <br />However when you put your actual api url then file will upload to sever</p>
+		<p>File will not upload to actual server right now, <br />However when you put your actual api url then file will upload to sever.</p>
+<pre>
+Upload.upload({
+    url: 'path-your-api-url',
+    data:  {
+		logo: Upload.dataUrltoBlob(dataUrl, file.name)
+	},
+});
+</pre>
+	<p>Replace url: 'path-your-api-url' with you actual url.</p>
 		</div>
 	</md-content>
 
